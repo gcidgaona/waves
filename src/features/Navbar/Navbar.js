@@ -22,7 +22,7 @@ function Navbar() {
     if(link.toLowerCase() === actualView) return 'text-blue-400'
     return 'text-gray-600'
   }
-  
+
   return (
     <header className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-lg'}`}>
       <div className="max-w-6xl mx-auto px-5 sm:px-6">
@@ -46,11 +46,8 @@ function Navbar() {
                   </li>
                 ))
               }
-f3`` */}
             </ul>
-
           </nav>
-
         </div>
       </div>
     </header>
