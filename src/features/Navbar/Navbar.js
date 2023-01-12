@@ -1,14 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { useContext } from 'react';
-import ViewContext from '../../helpers/context/ViewContext';
 import { Link } from 'react-scroll';
 
 function Navbar() {
 
   const [top, setTop] = useState(true);
-  const { actualView } = useContext(ViewContext)
 
-  // detect whether user has scrolled the page down by 10px 
   useEffect(() => {
     const scrollHandler = () => {
       window.pageYOffset > 10 ? setTop(false) : setTop(true)
@@ -34,7 +30,7 @@ function Navbar() {
               {
                 links.map(link => (
                   <li className='font-medium text-gray-600 hover:text-blue-300 px-3 sm:px-5 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer'>
-                    <Link activeClass="text-blue-400" to={link.toLowerCase()} spy={true} smooth={true} offset={-50} duration={300}>
+                    <Link activeClass="text-blue-400" to={link.toLowerCase()} spy={true} smooth={true} offset={-75} duration={300}>
                       {link}
                     </Link>
                   </li>
