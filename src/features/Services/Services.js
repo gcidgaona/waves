@@ -75,15 +75,17 @@ export const Services = () => {
       }, [controls3, inView3]);
 
   return (
-    <div className="flex justify-center h-screen items-center flex-col" ref={ref2} id='services'>
-        <div className='w-9/12 sm:w-7/12 mb-8'>
+    <div className="flex h-fit pb-16  sm:h-screen items-center flex-col" ref={ref2} id='services'>
+        <div className='w-9/12 sm:w-7/12 mb-8 pt-12'>
             <motion.div ref={ref3}  className='flex flex-row items-center w-full' initial={{opacity: 0}} animate={controls3}>
                 <h1 className='title'>Services</h1>
             </motion.div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 w-11/12 sm:px-20 md:w-10/12 md:px-0 xl:w-8/12 2xl:w-7/12">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-11/12 sm:px-20 md:w-10/12 md:px-0 xl:w-8/12 2xl:w-7/12 h-full sm:pt-16">
             <div className="hidden md:flex md:justify-center">
-                <img src="/images/pc.png" width={350}/>
+                <div>
+                    <img src="/images/pc.png" width={350}/>
+                </div>
             </div>
             <div className='flex flex-col flex-wrap gap-4' ref={ref}>
                 <motion.div  class="flex items-start rounded-xl bg-white md:w-96 w-full p-4 shadow-xl" initial={{x: '100vw'}} animate={controls}>
