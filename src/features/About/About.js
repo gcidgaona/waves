@@ -38,7 +38,7 @@ export const About = () => {
     }
   }, [controls2, inView]);
   return (
-    <div  className='w-full bg-slate-200 h-80 flex flex-col justify-center items-center'>
+    <div  className='w-full bg-slate-200 h-80 flex flex-col justify-center items-center' id='about'>
       <motion.div ref={ref}  className='flex flex-row items-center gap-2 w-7/12' initial={{opacity: 0}} animate={controls}>
         <h1 className='title'>Quienes somos</h1>
       </motion.div>

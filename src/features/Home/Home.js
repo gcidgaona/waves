@@ -31,7 +31,7 @@ export const Home = () => {
     window.open('https://wa.me/56997148987', '_blank', 'noreferrer');
   }
   return (
-    <section ref={ref} className="min-h-screen flex justify-center">
+    <section ref={ref} className="min-h-screen flex justify-center" id='home'>
       <div className='w-7/12'>
         <div className="max-w-6xl h-screen px-4 sm:px-6">
           <div className='flex flex-col h-screen'>

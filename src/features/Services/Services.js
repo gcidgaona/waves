@@ -75,7 +75,7 @@ export const Services = () => {
       }, [controls3, inView3]);
 
   return (
-    <div className="flex justify-center h-screen items-center flex-col" ref={ref2}>
+    <div className="flex justify-center h-screen items-center flex-col" ref={ref2} id='services'>
         <div className='w-7/12 mb-8'>
             <motion.div ref={ref3}  className='flex flex-row items-center gap-2 w-7/12' initial={{opacity: 0}} animate={controls3}>
                 <h1 className='title'>Services</h1>
