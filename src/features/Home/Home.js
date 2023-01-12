@@ -32,15 +32,16 @@ export const Home = () => {
   }
   return (
     <section ref={ref} className="min-h-screen flex justify-center" id='home'>
-      <div className='w-7/12'>
+      <div className='w-11/12 sm:w-7/12'>
         <div className="max-w-6xl h-screen px-4 sm:px-6">
           <div className='flex flex-col h-screen'>
             <motion.div className="text-center pb-12 md:pb-16 h-full flex flex-col justify-center" initial={{opacity: 0, scale: 0.5}} animate={{opacity: 1, scale: 1}} 
-            transition={{
-              duration: 0.8,
-              delay: 0.5,
-              ease: [0, 0.71, 0.2, 1.01]
-            }}>
+              transition={{
+                duration: 0.8,
+                delay: 0.5,
+                ease: [0, 0.71, 0.2, 1.01]
+              }}
+            >
               <h1 className="main-title" data-aos="zoom-y-out">Trabaja junto a
               <span data-text="Waves" className="title-home-waves"> Waves</span>
               </h1>

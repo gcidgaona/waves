@@ -76,12 +76,12 @@ export const Services = () => {
 
   return (
     <div className="flex justify-center h-screen items-center flex-col" ref={ref2} id='services'>
-        <div className='w-7/12 mb-8'>
-            <motion.div ref={ref3}  className='flex flex-row items-center gap-2 w-7/12' initial={{opacity: 0}} animate={controls3}>
+        <div className='w-9/12 sm:w-7/12 mb-8'>
+            <motion.div ref={ref3}  className='flex flex-row items-center w-full' initial={{opacity: 0}} animate={controls3}>
                 <h1 className='title'>Services</h1>
             </motion.div>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 w-full px-4 sm:px-20 md:w-10/12 md:px-0 xl:w-8/12 2xl:w-7/12">
+        <div className="grid grid-cols-1 md:grid-cols-2 w-11/12 sm:px-20 md:w-10/12 md:px-0 xl:w-8/12 2xl:w-7/12">
             <div className="hidden md:flex md:justify-center">
                 <img src="/images/pc.png" width={350}/>
             </div>

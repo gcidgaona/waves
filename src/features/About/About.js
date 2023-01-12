@@ -39,10 +39,10 @@ export const About = () => {
   }, [controls2, inView]);
   return (
     <div  className='w-full bg-slate-200 h-80 flex flex-col justify-center items-center' id='about'>
-      <motion.div ref={ref}  className='flex flex-row items-center gap-2 w-7/12' initial={{opacity: 0}} animate={controls}>
+      <motion.div ref={ref}  className='flex flex-row items-center gap-2 w-9/12 sm:w-7/12' initial={{opacity: 0}} animate={controls}>
         <h1 className='title'>Quienes somos</h1>
       </motion.div>
-      <motion.div initial={{opacity: 0}} animate={controls2} className='w-7/12'>
+      <motion.div initial={{opacity: 0}} animate={controls2} className='w-9/12 sm:w-7/12'>
         <p className='text-gray-500 tracking-wide'>
           Somos una Pyme con ganas en ayudar y hacer crecer a otras Pyme! 
           Esto lo hacemos mediante una Web realizada a su medida, conociendo sus interes y lo que quieres lograr.
