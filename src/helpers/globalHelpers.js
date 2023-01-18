@@ -7,7 +7,6 @@ export const openLinkedin = () => {
 export const openWsp = () => {
   window.open('https://wa.me/56997148987', '_blank', 'noreferrer');
 }
-
 export const openMail = () => {
   window.open('mailto:gabrielcid8@gmail.com?subject=Cotizacion Proyecto Web', '_blank', 'noreferrer');
 }
