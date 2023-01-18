@@ -15,6 +15,16 @@ function Navbar() {
 
   const links = ['Inicio', 'Nosotros', 'Servicios', 'Portafolio']
 
+  const getRoute = (link) => {
+    const routes = {
+      'Inicio': 'home',
+      'Nosotros': 'about', 
+      'Servicios': 'services', 
+      'Portafolio': 'portfolio'
+    }
+    return routes[link]
+  }
+
   return (
     <header className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out ${!top && 'bg-white backdrop-blur-sm shadow-lg'}`}>
       <div className="max-w-6xl mx-auto px-5 sm:px-6">
@@ -30,7 +40,7 @@ function Navbar() {
               {
                 links.map(link => (
                   <li className='font-medium text-gray-600 hover:text-blue-300 px-3 sm:px-5 py-3 flex items-center transition duration-150 ease-in-out cursor-pointer'>
-                    <Link activeClass="text-blue-400" to={link.toLowerCase()} spy={true} smooth={true} offset={-75} duration={300}>
+                    <Link activeClass="text-blue-400" to={getRoute(link)} spy={true} smooth={true} offset={-75} duration={300}>
                       {link}
                     </Link>
                   </li>
