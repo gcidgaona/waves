@@ -15,7 +15,7 @@ export const Footer = () => {
   } = footerStr
   return (
     <div className='w-full flex justify-center bg-slate-200 h-auto'>
-      <div className='w-8/12 md:w-7/12 py-4 grid grid-cols-2 text-xs gap-2 md:gap-1 items-center'>
+      <div className='w-11/12 sm:w-8/12 md:w-7/12 py-4 grid grid-cols-2 text-xs gap-2 md:gap-1 items-center'>
         <div className='flex flex-col gap-1'>
           <div className='flex gap-2 flex-row items-center hover:cursor-pointer transform transition-transform hover:scale-105' onClick={openGitHub}>
             <Unicons.UilGithub  size={SIZE_ICON} color={COLOR_ICON} className='mt-1'/>
