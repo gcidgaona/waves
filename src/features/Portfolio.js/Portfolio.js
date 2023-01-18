@@ -11,35 +11,31 @@ export const Portfolio = () => {
     ERROR_OKANE,
     TITLE,
     PORTFOLIO
-   } = portfolioStr
-  const controls = useAnimation();
-  const controls2 = useAnimation();
+   } = portfolioStr;
+
+  const controlTitle = useAnimation();
+  const controlGrid = useAnimation();
   const [ref, inView] = useInView({threshold: 1});
 
 
   useEffect(() => {
     if (inView) {
-        controls.start({
+        controlTitle.start({
             opacity: 1,
             transition: {
               delay: 0.4,
               duration: 0.5
             },
         })
+        controlGrid.start({
+          opacity: 1,
+          transition: {
+            delay: 0.6,
+            duration: 0.5
+          },
+      })
     }
-  }, [controls, inView]);
-
-  useEffect(() => {
-    if (inView) {
-        controls2.start({
-            opacity: 1,
-            transition: {
-              delay: 0.6,
-              duration: 0.5
-            },
-        })
-    }
-  }, [controls2, inView]);
+  }, [controlTitle, inView, controlGrid]);
 
   const openCryptics = () => {
     window.open('https://cryp-tics.netlify.app/', '_blank', 'noreferrer');
@@ -65,10 +61,10 @@ export const Portfolio = () => {
 
   return (
     <div className='w-full h-fit md:h-screen flex flex-col items-center pb-4 pt-4 mb-4' id='portfolio'>
-      <motion.div ref={ref} className='pt-12 flex items-center w-9/12 sm:w-7/12 mb-4' initial={{opacity: 0}} animate={controls}>
+      <motion.div ref={ref} className='pt-12 flex items-center w-9/12 sm:w-7/12 mb-4' initial={{opacity: 0}} animate={controlTitle}>
         <h1 className='title'>{TITLE}</h1>
       </motion.div>
-      <motion.div className='grid grid-cols-1 gap-2 md:gap-0 md:grid-cols-2 h-full pt-12 sm:pt-20' initial={{opacity: 0}} animate={controls2}>
+      <motion.div className='grid grid-cols-1 gap-2 md:gap-0 md:grid-cols-2 h-full pt-12 sm:pt-20' initial={{opacity: 0}} animate={controlGrid}>
           <div className='rounded-xl w-80 h-96 md:w-72 overflow-hidden'>
             <div className='col-span-2 w-full h-full cursor-pointer relative hover:scale-110 transition-transform' onClick={openCryptics}>
               <div class="opacity-0 hover:opacity-100 duration-300 bg-slate-700 bg-opacity-50 absolute inset-0 z-10 flex justify-center items-center text-6xl text-white font-semibold">

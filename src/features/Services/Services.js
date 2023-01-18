@@ -11,47 +11,36 @@ export const Services = () => {
         CARD_SUPPORT
     } = servicesStr;
 
-    const controls = useAnimation();
-    const controls1 = useAnimation();
-    const controls2 = useAnimation();
-    const controls3 = useAnimation();
+    const controlCardUI = useAnimation();
+    const controlCardDev = useAnimation();
+    const controlCardSupp = useAnimation();
+    const controlTitle = useAnimation();
     const [ref, inView] = useInView();
-    const [ref3, inView3] = useInView({threshold: 1});
+    const [ref3, inViewTitle] = useInView({threshold: 1});
 
     useEffect(() => {
     if (inView) {
-        controls.start({
+        controlCardUI.start({
             x: 0,
             transition: {
                 delay: 0.7,
             }
         })
-    }
-    }, [controls, inView]);
-    useEffect(() => {
-    if (inView) {
-        controls1.start({
+        controlCardDev.start({
             x: 0,
             transition: {
                 delay: 1,
             }
         })
-    }
-    }, [controls1, inView]);
-    useEffect(() => {
-    if (inView) {
-        controls2.start({
+        controlCardSupp.start({
             x: 0,
             transition: {
                 delay: 1.2,
             }
         })
     }
-    }, [controls2, inView]);
-
-    useEffect(() => {
-    if (inView3) {
-        controls3.start({
+    if (inViewTitle) {
+        controlTitle.start({
             opacity: 1,
             transition: {
                 delay: 0.4,
@@ -59,12 +48,12 @@ export const Services = () => {
             },
         })
     }
-    }, [controls3, inView3]);
+    }, [controlCardUI, controlCardDev, controlCardSupp, inView, inViewTitle, controlTitle]);
 
   return (
     <div className="flex h-fit pb-16  sm:h-screen items-center flex-col" id='services'>
         <div className='w-9/12 sm:w-7/12 mb-8 pt-12'>
-            <motion.div ref={ref3}  className='flex flex-row items-center w-full' initial={{opacity: 0}} animate={controls3}>
+            <motion.div ref={ref3}  className='flex flex-row items-center w-full' initial={{opacity: 0}} animate={controlTitle}>
                 <h1 className='title'>{TITLE}</h1>
             </motion.div>
         </div>
@@ -75,7 +64,7 @@ export const Services = () => {
                 </div>
             </div>
             <div className='flex flex-col flex-wrap gap-4' ref={ref}>
-                <motion.div  class="flex items-start rounded-xl bg-white md:w-96 w-full p-4 shadow-xl" initial={{x: '100vw'}} animate={controls}>
+                <motion.div  class="flex items-start rounded-xl bg-white md:w-96 w-full p-4 shadow-xl" initial={{x: '100vw'}} animate={controlCardUI}>
                     <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
                         <img src="/images/busqueda.png" width={32} height={32}/>
                     </div>
@@ -85,7 +74,7 @@ export const Services = () => {
                         <p class="mt-2 text-sm text-gray-500">{CARD_UI.DESCRIPTION}</p>
                     </div>
                 </motion.div>
-                <motion.div class="flex items-start rounded-xl bg-white md:w-96 w-full p-4 shadow-xl sm:self-center" initial={{x: '100vw'}} animate={controls1}>
+                <motion.div class="flex items-start rounded-xl bg-white md:w-96 w-full p-4 shadow-xl sm:self-center" initial={{x: '100vw'}} animate={controlCardDev}>
                     <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
                         <img src="/images/engranaje.png" width={32} height={32}/>
                     </div>
@@ -94,7 +83,7 @@ export const Services = () => {
                         <p class="mt-2 text-sm text-gray-500">{CARD_DEV.DESCRIPTION}</p>
                     </div>
                 </motion.div>
-                <motion.div class="flex items-start rounded-xl bg-white md:w-96 w-full p-4 shadow-xl sm:self-end" initial={{x: '100vw'}} animate={controls2}>
+                <motion.div class="flex items-start rounded-xl bg-white md:w-96 w-full p-4 shadow-xl sm:self-end" initial={{x: '100vw'}} animate={controlCardSupp}>
                     <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
                         <img src="/images/cora.png" width={32} height={32}/>
                     </div>
