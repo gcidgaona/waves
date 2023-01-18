@@ -1,5 +1,5 @@
 const servicesStr = {
-  TITLE: 'Services',
+  TITLE: 'Servicios',
   CARD_UI: {
     TITLE: 'UI/UX',
     DESCRIPTION: 'Buscaremos el mejor enfoque para tu idea.'

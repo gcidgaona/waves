@@ -1,5 +1,5 @@
 const portfolioStr = {
-  TITLE: 'Portfolio',
+  TITLE: 'Nuestros Trabajos',
   PORTFOLIO: {
     CRYPTICS: 'Cryptics',
     MI_INVERSION: 'Mi Inversion',
