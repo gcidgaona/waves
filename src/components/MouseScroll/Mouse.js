@@ -11,7 +11,7 @@ export const Mouse = () => {
       <div className="mousey">
         <div className="scroller"></div>
       </div>
-      <p className='font-medium'>{GO_DOWN}</p>
+      <p className='font-medium dark:text-white'>{GO_DOWN}</p>
     </div>
   )
 }

@@ -51,7 +51,7 @@ export const Services = () => {
     }, [controlCardUI, controlCardDev, controlCardSupp, inView, inViewTitle, controlTitle]);
 
   return (
-    <div className="flex h-fit pb-16  sm:h-screen items-center flex-col" id='services'>
+    <div className="flex h-fit pb-16 sm:h-screen items-center flex-col bg-white dark:bg-primary" id='services'>
         <div className='w-9/12 sm:w-7/12 mb-8 pt-12'>
             <motion.div ref={ref3}  className='flex flex-row items-center w-full' initial={{opacity: 0}} animate={controlTitle}>
                 <h1 className='title'>{TITLE}</h1>
@@ -64,32 +64,32 @@ export const Services = () => {
                 </div>
             </div>
             <div className='flex flex-col flex-wrap gap-4' ref={ref}>
-                <motion.div  class="flex items-start rounded-xl bg-white md:w-96 w-full p-4 shadow-xl" initial={{x: '100vw'}} animate={controlCardUI}>
-                    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
+                <motion.div  class="flex items-start rounded-xl bg-white dark:bg-secondary md:w-96 w-full p-4 shadow-xl" initial={{x: '100vw'}} animate={controlCardUI}>
+                    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 dark:bg-slate-800">
                         <img src="/images/busqueda.png" width={32} height={32}/>
                     </div>
 
                     <div class="ml-4">
-                        <h2 class="font-semibold">{CARD_UI.TITLE}</h2>
-                        <p class="mt-2 text-sm text-gray-500">{CARD_UI.DESCRIPTION}</p>
+                        <h2 class="font-semibold dark:text-gray-200">{CARD_UI.TITLE}</h2>
+                        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{CARD_UI.DESCRIPTION}</p>
                     </div>
                 </motion.div>
-                <motion.div class="flex items-start rounded-xl bg-white md:w-96 w-full p-4 shadow-xl sm:self-center" initial={{x: '100vw'}} animate={controlCardDev}>
-                    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
+                <motion.div class="flex items-start rounded-xl bg-white dark:bg-secondary md:w-96 w-full p-4 shadow-xl sm:self-center" initial={{x: '100vw'}} animate={controlCardDev}>
+                    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 dark:bg-slate-800">
                         <img src="/images/engranaje.png" width={32} height={32}/>
                     </div>
                     <div class="ml-4">
-                        <h2 class="font-semibold">{CARD_DEV.TITLE}</h2>
-                        <p class="mt-2 text-sm text-gray-500">{CARD_DEV.DESCRIPTION}</p>
+                        <h2 class="font-semibold dark:text-gray-200">{CARD_DEV.TITLE}</h2>
+                        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{CARD_DEV.DESCRIPTION}</p>
                     </div>
                 </motion.div>
-                <motion.div class="flex items-start rounded-xl bg-white md:w-96 w-full p-4 shadow-xl sm:self-end" initial={{x: '100vw'}} animate={controlCardSupp}>
-                    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100">
+                <motion.div class="flex items-start rounded-xl bg-white dark:bg-secondary md:w-96 w-full p-4 shadow-xl sm:self-end" initial={{x: '100vw'}} animate={controlCardSupp}>
+                    <div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 dark:bg-slate-800">
                         <img src="/images/cora.png" width={32} height={32}/>
                     </div>
                     <div class="ml-4">
-                        <h2 class="font-semibold">{CARD_SUPPORT.TITLE}</h2>
-                        <p class="mt-2 text-sm text-gray-500">{CARD_SUPPORT.DESCRIPTION}</p>
+                        <h2 class="font-semibold dark:text-gray-200">{CARD_SUPPORT.TITLE}</h2>
+                        <p class="mt-2 text-sm text-gray-500 dark:text-gray-400">{CARD_SUPPORT.DESCRIPTION}</p>
                     </div>
                 </motion.div>
             </div>

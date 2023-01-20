@@ -6,7 +6,6 @@ import { motion } from 'framer-motion'
 import { openGitHub, openLinkedin, openWsp } from '../../helpers/globalHelpers';
 
 const SIZE_ICON = 40
-const COLOR_ICON = '#475569'
 
 export const Home = () => {
 
@@ -16,9 +15,10 @@ export const Home = () => {
     DESCRIPTION_PAGE
   } = homeStr
 
-
+  const darkToggle = true
+  const COLOR_ICON = darkToggle ? '#9ca3af': '#475569'
   return (
-    <section className="min-h-screen flex justify-center" id='home'>
+    <section className="min-h-screen flex justify-center dark:bg-primary" id='home'>
       <div className='w-11/12 sm:w-7/12'>
         <div className="max-w-6xl h-screen px-4 sm:px-6">
           <div className='flex flex-col h-screen'>

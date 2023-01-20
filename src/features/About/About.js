@@ -37,12 +37,12 @@ export const About = () => {
   }, [controlTitle, controlDescription, inView]);
 
   return (
-    <div  className='w-full bg-slate-200 h-80 flex flex-col justify-center items-center' id='about'>
+    <div  className='w-full bg-slate-200 dark:bg-secondary h-80 flex flex-col justify-center items-center' id='about'>
       <motion.div ref={ref}  className='flex flex-row items-center gap-2 w-9/12 sm:w-7/12' initial={{opacity: 0}} animate={controlTitle}>
         <h1 className='title'>{TITLE}</h1>
       </motion.div>
       <motion.div initial={{opacity: 0}} animate={controlDescription} className='w-9/12 sm:w-7/12'>
-        <p className='text-gray-500 tracking-wide'>
+        <p className='text-gray-500 dark:text-gray-400 tracking-wide'>
           {DESCRIPTION}
           <span className='font-semibold'>
             {APP_WEB_MOVILE}

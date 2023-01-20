@@ -60,7 +60,7 @@ export const Portfolio = () => {
   }
 
   return (
-    <div className='w-full h-fit md:h-screen flex flex-col items-center pb-4 pt-4 mb-4' id='portfolio'>
+    <div className='w-full h-fit md:h-screen flex flex-col items-center pb-4 pt-4 dark:bg-primary' id='portfolio'>
       <motion.div ref={ref} className='pt-12 flex items-center w-9/12 sm:w-7/12 mb-4' initial={{opacity: 0}} animate={controlTitle}>
         <h1 className='title'>{TITLE}</h1>
       </motion.div>
