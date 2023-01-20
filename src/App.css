@@ -1,3 +1,6 @@
+body * {
+  @apply transition-colors duration-200;
+}
 
 :root {
   --primary: #0d0f11;
